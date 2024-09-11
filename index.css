@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  line-height: normal;
+  overflow: hidden;
+}
+
+.catimg-icon {
+  position: absolute;
+  top: 8.125rem;
+  left: 0rem;
+  width: 94.5rem;
+  height: 53.25rem;
+  object-fit: cover;
+}
+.b {
+  position: absolute;
+  top: 43rem;
+  left: 54.563rem;
+}
+.macbook-pro-14-1 {
+  width: 100%;
+  position: relative;
+  background-color: #000;
+  height: 61.375rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: 14rem;
+  color: #fff;
+  font-family: Inter;
+}
