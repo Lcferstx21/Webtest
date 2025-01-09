@@ -1,18 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>陈乐洋妈妈的空间</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #e5ff00;
+      }
+      /* 环绕文字的动画 */
+      @keyframes marquee-horizontal {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes marquee-vertical {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(100%);
+        }
+      }
+
+      .marquee {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .marquee div {
+        position: absolute;
+        white-space: nowrap;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .marquee .top,
+      .marquee .bottom {
+        width: 100%;
+        animation: marquee-horizontal 10s linear infinite;
+      }
+
+      .marquee .top {
+        top: 0;
+        left: 0;
+        width: 700px;
+        background-color: black;
+        color: #e5ff00;
+        animation-direction: normal;
+      }
+
+      .marquee .bottom {
+        bottom: 0;
+        width: 700px;
+        left: 0;
+        background-color: black;
+        color: #e5ff00;
+        animation-direction: reverse;
+      }
+
+      .marquee .left,
+      .marquee .right {
+        height: 100%;
+        animation: marquee-vertical 10s linear infinite;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+
+      .marquee .left {
+        background-color: black;
+        text-align: center;
+        color: white;
+        top: 0;
+        left: 0px;
+        transform: rotate(0deg);
+        animation-direction: normal;
+      }
+
+      .marquee .right {
+        top: 0;
+        right: 0;
+        background-color: black;
+        text-align: center;
+        color: white;
+        transform: rotate(180deg);
+        animation-direction: reverse;
+      }
+    </style>
   </head>
-  <body>
-    <div class="macbook-pro-14-1">
-      <img class="catimg-icon" alt="" src="./catimg.png" />
-      <b class="b">100%</b>
+  <body class="text-gray-800 font-sans">
+    <!-- 环绕文字 -->
+    <div class="marquee">
+      <!-- 顶部文字 -->
+      <div class="top">
+        Welcome to 456's zone &mdash; Welcome to 456's zone &mdash; Welcome to
+        456's zone &mdash;
+      </div>
+      <!-- 底部文字 -->
+      <div class="bottom">
+        Welcome to 456's zone &mdash; Welcome to 456's zone &mdash; Welcome to
+        456's zone &mdash;
+      </div>
+      <!-- 左侧文字 -->
+      <div class="left">
+        Welcome to 456's zone &mdash; Welcome to 456's zone &mdash; Welcome to
+        456's zone &mdash;
+      </div>
+      <!-- 右侧文字 -->
+      <div class="right">
+        Welcome to 456's zone &mdash; Welcome to 456's zone &mdash; Welcome to
+        456's zone &mdash;
+      </div>
     </div>
+
+    <div class="h-[100%] px-8 py-8 overflow-y-hidden">
+      <div class="bg-white p-6">
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+          <img src="./45a6.jpg" alt="456" class="max-h-[700px]" />
+          <div class="md:ml-6 mt-6 md:mt-0">
+            <h2 class="text-[60px] font-black">hi, it's 456</h2>
+
+            <h3 class="text-xl font-semibold">
+              MOTHER OF
+              <a rel="" href="https://www.instagram.com/kuroboarchive/"
+                ><u>@kuroboarchive</u></a
+              >
+            </h3>
+            <p class="text-gray-600 mt-2">
+              a dedicated mother and a passionate individual currently seeking
+              opportunities to provide for my child.
+            </p>
+            <br />
+
+            <p>
+              Feel free to contact me at <b><u>Lcferstx21@outlook.com</u></b
+              >.
+            </p>
+            <br />
+            <div class="text-[12px]">
+              <p>一児の母として、</p>
+              <p>子どものための食事ために仕事を探しています。</p>
+              <p>お気軽にご連絡ください。</p>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-black text-white text-center py-10 text-[11px]">
+      <p>&copy; 456. All Rights Reserved.</p>
+    </footer>
   </body>
 </html>
